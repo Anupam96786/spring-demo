@@ -11,7 +11,7 @@ public class Student {
     private int rollNo;
     private String department;
 
-    public Student(String name, String address, String department, int rollNo, int age, String gender) {
+    public Student(String name, String address, int age, String gender, int rollNo, String department) {
         this.name = name;
         this.address = address;
         this.age = age;
@@ -23,11 +23,11 @@ public class Student {
     public HashMap<String, Object> getData() {
         HashMap<String, Object> data = new HashMap<>();
         data.put("name", name);
-        data.put("department", department);
-        data.put("rollNo", rollNo);
-        data.put("age", age);
         data.put("address", address);
+        data.put("age", age);
         data.put("gender", gender);
+        data.put("rollNo", rollNo);
+        data.put("department", department);
         return data;
     }
 
