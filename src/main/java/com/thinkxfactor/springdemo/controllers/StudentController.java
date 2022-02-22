@@ -17,11 +17,6 @@ import com.thinkxfactor.springdemo.entity.Student;
 public class StudentController {
     private static ArrayList<HashMap> students = generateStudents();
 
-    @GetMapping("/hello")
-    public String sayHello() {
-        return "Hello World";
-    }
-
     private static ArrayList<HashMap> generateStudents() {
         ArrayList<HashMap> students = new ArrayList<HashMap>();
         students.add(new Student("Student A", "Address A", 20, "Male", 50, "CSE").getData());
