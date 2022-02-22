@@ -5,15 +5,19 @@ import java.util.HashMap;
 public class Student {
 
     private String name;
-    private String department;
-    private int rollNo;
+    private String address;
     private int age;
+    private String gender;
+    private int rollNo;
+    private String department;
 
-    public Student(String name, String department, int rollNo, int age) {
+    public Student(String name, String address, String department, int rollNo, int age, String gender) {
         this.name = name;
-        this.department = department;
-        this.rollNo = rollNo;
+        this.address = address;
         this.age = age;
+        this.gender = gender;
+        this.rollNo = rollNo;
+        this.department = department;
     }
 
     public HashMap<String, Object> getData() {
@@ -22,6 +26,8 @@ public class Student {
         data.put("department", department);
         data.put("rollNo", rollNo);
         data.put("age", age);
+        data.put("address", address);
+        data.put("gender", gender);
         return data;
     }
 
