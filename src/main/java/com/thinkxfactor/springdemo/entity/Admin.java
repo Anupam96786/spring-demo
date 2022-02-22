@@ -1,20 +1,24 @@
 package com.thinkxfactor.springdemo.entity;
 
+import java.util.HashMap;
+
 public class Admin {
-    private String id;
     private String name;
     private String username;
     private String password;
 
-    public Admin(String id, String name, String username, String password) {
-        this.id = id;
+    public Admin(String name, String username, String password) {
         this.name = name;
         this.username = username;
         this.password = password;
     }
 
-    public String getId() {
-        return id;
+    public HashMap getData() {
+        HashMap<String, String> data = new HashMap<String, String>();
+        data.put("name", this.name);
+        data.put("username", this.username);
+        data.put("password", this.password);
+        return data;
     }
 
     public String getName() {
